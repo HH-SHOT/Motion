@@ -14,14 +14,7 @@ const Calendars = () => {
     return(
         <div>
         <Navbar/>
-        
-
-
-
-        
-        
-        
-    <div
+        <div
       style={{
         height: "100%",
         width: "100%", 

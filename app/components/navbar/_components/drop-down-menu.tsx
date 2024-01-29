@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
 import {
   Accordion,
@@ -397,24 +398,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
        
         </Link>
 
-        <Link
-          href={"/contact"}
-          className="
-            flex
-            flex-1
-            items-center 
-            justify-between
-            border-b
-          
-         
-            py-4
-          
-      
-            "
-        >
-       Request a demo
         
-        </Link>
       </Accordion>
 
       <div className="pt-12">
@@ -430,15 +414,16 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
             </Button>
           </Link>
 
-          <Link href={"/sign-in"}>
-            <Button
-            variant={"outline"}
-            className="w-full"
-        
-            >
+          
+          <LoginLink className={buttonVariants({
+            variant: "secondary",
+            size: "sm",
+            
+            })}>
+
             Log in 
-            </Button>
-          </Link>
+            </LoginLink>
+          
         </div>
       </div>
     </div>
